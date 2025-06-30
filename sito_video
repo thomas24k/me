@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I'm one of them</title>
+</head>
+<body>
+  <h1>Let's have a look</h1>
+  <video width="640" controls>
+    <source src="who_I_am.mp4" type="video/mp4">
+    Il tuo browser non supporta il video HTML5.
+  </video>
+</body>
+</html>
