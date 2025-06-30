@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Thomas - Video & Profile</title>
-<style>
-  /* Reset e base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #fff;
-    color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 40px 20px;
-  }
-  .container {
-    display: flex;
-    max-width: 900px;
-    width: 100%;
-    gap: 60px;
-  }
-  /* Video a sinistra */
-  .video-container {
-    flex: 1.2;
-  }
-  video {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    background: #000;
-    display: block;
-  }
-  /* Sezione laterale */
-  .side-section {
-    flex: 0.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  .side-section img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  }
-  .side-section p {
-    font-weight: 600;
-    font-size: 1.15rem;
-    line-height: 1.5;
-    text-align: center;
-    color: #222;
-    letter-spacing: 0.015em;
-  }
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-  }
-  .links a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: #E50914; /* rosso ispirato al sito */
-    border: 2px solid #E50914;
-    padding: 12px 0;
-    border-radius: 4px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .links a:hover,
-  .links a:focus {
-    background-color: #E50914;
-    color: white;
-    outline: none;
-  }
-
-  /* Responsive */
-  @media (max-width: 700px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thomas - Video & Profile</title>
+  <style>
+    /* Reset e base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      padding: 20px 10px;
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
     .container {
-      flex-direction: column;
-      gap: 30px;
-    }
-    .side-section {
-      flex: none;
+      display: flex;
+      max-width: 900px;
       width: 100%;
+      gap: 60px;
+    }
+    /* Video a sinistra */
+    .video-container {
+      flex: 1.2;
+    }
+    .video-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0 0 16px 0;
+      text-transform: uppercase;
+      text-align: center;
+      color: #E50914;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      background: #000;
+      display: block;
+    }
+    /* Sezione laterale */
+    .side-section {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 24px;
+    }
+    .side-section img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .side-section p {
+      font-weight: 600;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      text-align: center;
+      color: #222;
+      letter-spacing: 0.015em;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
     }
     .links a {
-      font-size: 1rem;
-      padding: 10px 0;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #E50914;
+      border: 2px solid #E50914;
+      padding: 12px 0;
+      border-radius: 4px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-  }
-</style>
+    .links a:hover,
+    .links a:focus {
+      background-color: #E50914;
+      color: white;
+      outline: none;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .side-section {
+        flex: none;
+        width: 100%;
+        align-items: center;
+      }
+      .links a {
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="video-container">
+      <h1 class="video-title">Thomas Bordignon – Intro</h1>
       <video controls playsinline>
-        <source src="video.mp4" type="video/mp4" />
+        <source src="mio-video.mp4" type="video/mp4" />
         Il tuo browser non supporta il video HTML5.
       </video>
     </div>
     <div class="side-section">
       <img src="tuafoto.jpg" alt="Foto di Thomas" />
       <p>
-        Believe me we can do great things together<br /><br />
-        <br />
+        Believe in me we can do great things together<br />
         Let's talk a little just to know each other
       </p>
       <div class="links">
         <a href="ThomasBordignonResume.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
-        <a href="https://www.linkedin.com/in/thomasbordignon1712/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.instagram.com/bordignon_thomas/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/tuo-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/tuo-instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </div>
   </div>
